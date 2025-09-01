@@ -153,13 +153,13 @@ export function AuthButtons({ authed, email }: Props) {
               <button type="submit" className="w-full rounded-lg bg-fuchsia-600 py-2 text-sm font-semibold hover:bg-fuchsia-500">
                 Send magic link
               </button>
-              <button
+              {/* <button
                 type="button"
                 onClick={signInGoogle}
                 className="w-full rounded-lg border border-neutral-800 bg-neutral-950 py-2 text-sm hover:bg-neutral-900"
               >
                 Continue with Google
-              </button>
+              </button> */}
               <div className="text-center text-xs text-neutral-400">
                 By continuing you agree to our <Link href="/_/tos" className="underline">Terms</Link> and <Link href="/_/privacy" className="underline">Privacy Policy</Link>.
               </div>
