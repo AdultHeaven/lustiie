@@ -36,7 +36,13 @@ export default function HeaderClient() {
         <div className="mx-auto max-w-7xl px-3">
           <div className="flex h-14 items-center justify-between">
             <Link href="/" className="inline-flex items-center gap-2">
-              <span className="inline-block h-7 w-7 rounded-lg bg-gradient-to-br from-fuchsia-600 to-rose-600 shadow-[0_0_16px_rgba(236,72,153,.25)]" />
+            <span className=" items-center justify-center">
+  <img
+    src="/favicon.png"
+    alt="Lustiie Logo"
+    className="h-5 w-5 rounded"
+  />
+</span>
               <span className="text-sm font-semibold tracking-tight">Lustliie</span>
             </Link>
             <AuthButtons authed={authed} email={userEmail} />
