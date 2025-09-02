@@ -147,7 +147,7 @@ export function AuthButtons({ authed, email }: Props) {
                   value={mail}
                   onChange={(e) => setMail(e.target.value)}
                   className="w-full rounded-lg border border-neutral-800 bg-neutral-950 px-3 py-2 text-sm outline-none focus:border-neutral-700"
-                  placeholder="you@lustliie.link"
+                  placeholder="id@mail.com"
                 />
               </div>
               <button type="submit" className="w-full rounded-lg bg-fuchsia-600 py-2 text-sm font-semibold hover:bg-fuchsia-500">
@@ -161,7 +161,7 @@ export function AuthButtons({ authed, email }: Props) {
                 Continue with Google
               </button> */}
               <div className="text-center text-xs text-neutral-400">
-                By continuing you agree to our <Link href="/_/tos" className="underline">Terms</Link> and <Link href="/_/privacy" className="underline">Privacy Policy</Link>.
+                By continuing you agree to our <Link href="/l/tos" className="underline">Terms</Link> and <Link href="/l/privacy" className="underline">Privacy Policy</Link>.
               </div>
             </form>
           </div>
