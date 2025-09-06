@@ -19,8 +19,8 @@ export async function generateMetadata(
     .maybeSingle();
 
   const canonical = thread?.slug
-    ? `https://lustiie.com/t/${thread.slug}`
-    : `https://lustiie.com/t/${encodeURIComponent(params.slugOrId)}`;
+    ? `https://lustiie.com/thread/${thread.slug}`
+    : `https://lustiie.com/thread/${encodeURIComponent(params.slugOrId)}`;
 
   if (!thread || thread.is_deleted) {
     return {
@@ -56,7 +56,7 @@ export async function generateMetadata(
   const description = descBase.length > 180 ? descBase.slice(0, 177) + "…" : descBase;
 
   const title = `${thread.title} • Lustiie`;
-  const og = `https://lustiie.com/api/og/thread?title=${encodeURIComponent(thread.title)}&slug=${encodeURIComponent(thread.slug)}`;
+  const og = `https://lustiie.com/faviocn.ico`;
 
   return {
     title,
@@ -101,7 +101,7 @@ export default async function Page({
       .select("slug")
       .eq("id", Number(params.slugOrId))
       .maybeSingle();
-    if (found?.slug) redirect(`/t/${found.slug}`);
+    if (found?.slug) redirect(`/thread/${found.slug}`);
   }
 
   // fetch thread
