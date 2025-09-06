@@ -1,0 +1,5 @@
+# robots.txt for lustiie.com
+User-agent: *
+Allow: /
+
+Sitemap: https://lustiie.com/sitemap.xml
