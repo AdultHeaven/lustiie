@@ -1,0 +1,2702 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap');
+
+        body {
+          font-family: 'Montserrat', sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+    background-color: #121212; /* Dark Grayish Black */
+ width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.logo{
+  font-size: 7px;
+  color: white;
+}
+
+.pirate-header {
+  background: #1F1F1F; /* Very Dark Gray */
+  padding: 10px; /* Keep the existing padding */
+    padding-left: 20px; /* Keep the existing padding */
+        padding-right: 20px; /* Keep the existing padding */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between the logo and nav menu */
+  align-items: center; /* Vertically center the content */
+  
+  position: fixed; /* Make the header fixed at the top */
+  top: 0; /* Stick it to the top */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+
+        .pirate-nav-link {
+          color: white;
+          text-decoration: none;
+          margin-right: 20px;
+          font-weight: bold;
+          font-size: 10px;
+        }
+
+        .latest-games-title {
+          font-size: 30px;
+          padding: 15px 20px;
+          margin: 30px;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .pirate-games-list {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          padding: 20px;
+        }
+
+        .pirate-game-card {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          padding: 20px;
+          width: 300px;
+          color: white;
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+          transition: background-color 1s, transform 0.3s;
+        }
+
+        .pirate-game-card:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          transform: scale(1.05);
+        }
+
+        .pirate-card-title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .pirate-card-description {
+          font-size: 16px;
+          opacity: 0.8;
+        }
+
+        .loading-message {
+          text-align: center;
+          font-size: 20px;
+          color: white;
+          margin-top: 50px;
+        }
+
+        .pirate-nav-menu {
+          display: flex;
+          align-items: center;
+          margin-right: 40px;
+        }
+
+        .pirate-nav-link {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 10px;
+          padding: 0 10px;
+          margin: 0;
+        }
+        @media (max-width: 768px) {
+          .pirate-nav-link {
+            font-size: 8px; /* Adjust the font size as needed */
+          }
+          .logo{
+        
+            font-size: 5.5px;
+            color: white;
+        }
+        }
+        
+.separator {
+    width: 0; /* Set width to 0 for the diagonal effect */
+    height: 17px; /* Height of the separator */
+    border-left: 1px solid rgba(128, 128, 128, 0.5); /* Left border for the diagonal effect */
+    transform: rotate(10deg); /* Rotate to create the diagonal line */
+    margin: 0 -3px; /* Optional: spacing between elements */
+    display: inline-block; /* Allow it to align without extra space */
+    vertical-align: middle; /* Aligns the separator with the middle of surrounding text */
+}
+
+.search-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.3); /* Grey with 80% opacity */
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  position: absolute; /* Position button absolutely */
+  right: 15px; /* Offset from right edge of screen */
+      color: white; /* Or any visible color in dark mode */
+}
+
+/* Hover effect for zoom */
+.search-button:hover {
+  background-color: black; /* Darker color on hover */
+  transform: scale(1.1); /* Zooms the button slightly */
+}
+
+/* Icon styles */
+.search-button .fa-search {
+  margin-right: 5px;
+  transition: transform 0.3s; /* Smooth transition for the icon on hover */
+}
+
+/* Icon zoom on hover */
+.search-button:hover .fa-search {
+  transform: scale(1.2); /* Slightly zooms the icon */
+}
+
+      .smaller-text {
+          font-size: .9em;
+          color: rgb(194, 194, 91);
+        }
+
+
+        .header-separator {
+  width: 100%; /* Full width of the header */
+  height: 2px; /* Thickness of the line */
+  background-color: rgba(192, 192, 192, 0.8); /* Light grey for the separator line */
+  margin-top: 10px; /* Space above the separator line */
+  position: relative; /* Position relative to ensure it stays below the header content */
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.8); /* Initial glow effect */
+  animation: glow 1.5s infinite alternate, move 3s infinite alternate; /* Glow and side-to-side movement */
+}
+.game-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #f5f5f5;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.game-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.game-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.game-download-section {
+  margin-top: 30px;
+}
+
+.download-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download-button {
+  padding: 10px 20px;
+  color: #121212;
+  background-color: #ffcc00;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background-color: #ff9900;
+}
+
+.tags-section {
+  margin-top: 30px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag-item {
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+
+/* Fullscreen container with top margin */
+.game-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin-top: 50px;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.menu-container {
+  margin-top:40px;
+  width:100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ✅ Align items to the left */
+    background-color:rgb(27, 26, 26); /* ✅ Grey background */
+    padding: 0 7px;
+    position: fixed;
+      z-index: 9999; /* 🚀 Super high priority so nothing overlaps */
+          color:grey;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.5); /* ✅ Subtle grey line */
+    border-top: 1px solid rgba(55, 53, 53, 0.5); /* ✅ Subtle grey line */
+  
+  }
+  
+  .menu-item {
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
+            color:rgb(145, 143, 143);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  }
+  
+  .menu-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1); /* ✅ Slight hover effect */
+  }
+
+@media (min-width: 1025px) {
+  .game-details-container {
+    width: 70%;
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Optional: Adds spacing inside */
+    margin-top: 40px;
+  }
+  .top-banner {
+    position: fixed;
+    top: 105px; /* Moves it 5px higher (adjust as needed) */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it's above other elements */
+  }
+}
+@media (max-width: 1024px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+
+/* Ensure the header is 100% width and align everything to the left */
+.game-header {
+  display: block; /* Use block instead of flex for the title */
+  width: 100%; /* Make sure the container takes up the full width */
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  margin-top: -40px;
+}
+
+/* Force the title to be aligned left */
+.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: orange;
+  margin: 0;
+  margin-left:10px;
+  text-align: left !important; /* Force text alignment to the left */
+  width: 100% !important; /* Ensure it takes up 100% of the width */
+}
+
+.game-version {
+  font-size: 1.5rem; /* Smaller font for version */
+  font-weight: normal;
+  color: #b0b0b0; /* Subtle color for version */
+  margin-left: 8px; /* Space between title and version */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 2rem; /* Slightly smaller on mobile */
+  }
+  .game-version {
+    font-size: 1.2rem;
+  }
+}
+
+/* Description section styling */
+.game-description {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 98%;           /* Makes it responsive for smaller screens */
+  margin: 20px auto 0px; /* Centers the section and adds space at the bottom */
+  margin-top: -20px;
+  color: rgba(212, 212, 212, 0.55); /* Adds opacity to the text color */
+  text-align: justify;  /* Aligns text on both sides for a cleaner look */
+}
+
+
+
+.download-section h2 {
+  font-size: 1rem;                          /* Increase font size for prominence */
+  margin-bottom: 15px;                      /* More space below the heading */
+  color: #ffffff;                           /* White color for contrast */
+  text-transform: uppercase;                /* Uppercase for a bold look */
+  letter-spacing: 1px;                      /* Add spacing between letters */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05); /* Underline effect for emphasis */
+  padding-bottom: 5px;                      /* Space between text and underline */
+  font-weight: bold;                        /* Make the heading bold */
+  text-align: left;                         /* Align text to the left */
+}
+
+.platform-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;                                     /* White text for contrast */
+  background: linear-gradient(135deg, #0078d4, #0056a3); /* Windows button gradient */
+  text-decoration: none;
+  border-radius: 8px;                                /* Rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);         /* Shadow for depth */
+  display: inline-flex;                               /* Flexbox for icon and text */
+  align-items: center;                                /* Center items vertically */
+  position: relative;                                 /* Positioning for pseudo-elements */
+  overflow: hidden;                                   /* Hide overflow for pseudo-element effects */
+}
+
+.download-button .icon {
+  margin-right: 8px;                                 /* Spacing between icon and text */
+  font-size: 1.2rem;                                 /* Icon size */
+}
+
+.windows-button { 
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.3), rgba(0, 86, 163, 0.2)); /* Gradient for Windows with opacity */
+}
+
+.mac-button { 
+  background: linear-gradient(135deg, rgba(85, 85, 85, 0.3), rgba(68, 68, 68, 0.1)); /* Gradient for Mac with opacity */
+}
+
+.android-button { 
+  background: linear-gradient(135deg, rgba(61, 220, 132, 0.3), rgba(40, 179, 94, 0.1)); /* Gradient for Android with opacity */
+}
+
+
+.download-button:hover {
+  opacity: 0.9;                                      /* Slight opacity change on hover */
+  transform: translateY(-2px);                      /* Lift effect on hover */
+}
+
+.download-button:active {
+  transform: translateY(0);                           /* Return to normal on click */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);          /* Reduce shadow on click */
+}
+
+/* Adding a pseudo-element for hover effect */
+.download-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);              /* Light overlay effect */
+  border-radius: 50%;                                /* Circular overlay */
+  transform: translate(-50%, -50%) scale(0);        /* Initially hidden */
+  transition: transform 0.3s ease;                   /* Smooth transition for overlay */
+}
+
+.download-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);        /* Show overlay on hover */
+}
+
+
+
+
+
+/* Screenshots section styling */
+.screenshots-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.screenshots-section h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.screenshots-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0px;
+}
+
+.screenshot-item {
+  width: calc(50% - 10px); /* Two items per row on desktop */
+  aspect-ratio: 16 / 9; /* Keeps a consistent aspect ratio for images */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container while cropping as needed */
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .screenshot-item {
+    width: 100%; /* One item per row on mobile */
+  }
+}
+
+/* Game details section styling */
+.game-details {
+  width: 100%;                                          /* Full width */
+  background: linear-gradient(135deg, rgba(34, 34, 34, 0.9), rgba(0, 0, 0, 0.7)); /* Gradient background */
+  padding: 30px;                                       /* Increased padding for better spacing */
+  border-radius: 12px;                                 /* More rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);          /* Deeper shadow for more depth */
+}
+
+/* Container for details */
+.details-container {
+  display: flex;                                       /* Flexbox for horizontal alignment */
+  justify-content: space-around;                       /* Even space around items */
+  align-items: center;                                 /* Center items vertically */
+}
+
+/* Individual detail item styling */
+.detail-item {
+  flex: 1;                                            /* Each item takes equal space */
+  text-align: center;                                /* Center text */
+  padding: 20px;                                     /* Increased padding for each item */
+  background-color: rgba(255, 255, 255, 0.1);       /* Light transparent background */
+  border-radius: 10px;                               /* Rounded corners for items */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+  margin: 0 10px;                                    /* Margin between items */
+}
+
+/* Hover effect for detail items */
+.detail-item:hover {
+  transform: translateY(-5px);                       /* Lift effect */
+  background-color: rgba(255, 255, 255, 0.2);       /* Darker on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);         /* Shadow effect on hover */
+}
+
+/* Title styling */
+.detail-title {
+  font-size: 1.4rem;                                 /* Slightly larger font size */
+  color: #ffffff;                                    /* White color for titles */
+  margin-bottom: 8px;                                /* Space below titles */
+  font-weight: bold;                                 /* Bold for emphasis */
+}
+
+/* Value styling */
+.detail-value {
+  font-size: 2rem;                                   /* Larger font size for values */
+  color: #d4d4d4;                                    /* Light color for values */
+  font-weight: bold;                                 /* Bold for emphasis */
+  letter-spacing: 1px;                               /* Slight spacing for a modern look */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;                           /* Stack items on smaller screens */
+    align-items: stretch;                             /* Stretch items to fill the width */
+  }
+
+  .detail-item {
+    width: 100%;   
+      margin: 0 0px;                                    /* Margin between items */
+/* Full width on smaller screens */
+    margin-bottom: 15px;                              /* Space between stacked items */
+  }
+
+
+}
+/* Progress container styling */
+.progress-container {
+  width: 100%;                          /* Full width */
+  height: 20px;                        /* Height of the progress bar */
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  border-radius: 5px;                 /* Rounded corners */
+  overflow: hidden;                     /* Ensures no overflow */
+  margin: 10px 0;                       /* Space around progress bar */
+}
+
+/* Progress bar styling */
+.progress-bar {
+  height: 100%;                        /* Full height of the container */
+  background-color: rgba(118, 199, 192, 0.3); /* Color of the progress with opacity */
+  transition: width 0.4s ease;        /* Smooth transition for width change */
+}
+
+/* Optional: Style for low rating */
+.progress-bar.low {
+  background-color: #e74c3c;          /* Red for low ratings */
+}
+
+/* Optional: Style for medium rating */
+.progress-bar.medium {
+  background-color: #f39c12;          /* Orange for medium ratings */
+}
+
+/* Optional: Style for high rating */
+.progress-bar.high {
+  background-color: #2ecc71;          /* Green for high ratings */
+}
+
+
+/* Detail item styling */
+.detail-item {
+  display: flex;                      /* Use flexbox for alignment */
+  flex-direction: column;            /* Stack elements vertically */
+  align-items: flex-start;           /* Align items to the start */
+  margin-bottom: 20px;               /* Space between items */
+  padding: 10px;                     /* Padding for better spacing */
+  border-radius: 8px;                /* Rounded corners */
+  background-color: rgba(30, 30, 30, 0.14); /* Semi-transparent background */
+}
+
+/* Title styling */
+.detail-title {
+  font-size: 1.2rem;                 /* Font size for title */
+  color: #ffffff;                    /* Title color */
+  margin-bottom: 10px;               /* Space below title */
+}
+
+/* Progress container styling */
+.progress-container {
+  width: 100%;                       /* Full width */
+  border-radius: 8px;               /* Rounded corners */
+  overflow: hidden;                  /* Hide overflow */
+}
+
+/* Progress bar styling */
+.progress-bar {
+  height: 20px;                      /* Height of the progress bar */
+  background-color: rgba(118, 199, 192, 0.8); /* Color of the progress */
+  transition: width 0.4s ease;       /* Smooth transition for width change */
+}
+
+/* Rating value container */
+.rating-value-container {
+  display: flex;                     /* Flex container for alignment */
+  justify-content: space-between;    /* Space between items */
+  width: 100%;                       /* Full width */
+  margin-top: 5px;                  /* Space above the value */
+}
+
+/* Rating value styling */
+.detail-value {
+  font-size: 1rem;                  /* Font size for value */
+  color: #ffffff;                   /* Value color */
+  margin-left: auto;                /* Push to the right */
+}
+
+.developer-details {
+  margin: 20px 0; /* Adds spacing around the section */
+  padding: 15px; /* Adds padding inside the section */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+.developer-title {
+  font-size: 1.1rem; /* Title font size */
+  color: rgba(255, 255, 255, 0.2); /* White color with 85% opacity */
+  margin-right: 15px; /* Space between title and link */
+  margin-bottom: 0; /* Remove bottom margin to align vertically with link */
+}
+
+.developer-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flexbox to arrange items in a row */
+  align-items: center; /* Center items vertically */
+}
+
+.developer-item {
+  margin-bottom: 0; /* No spacing between items as they are inline */
+}
+
+.developer-link {
+  color: #3ddc84; /* Green color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the link bold */
+  font-size: 1.2rem; /* Slightly larger font size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  display: inline; /* Keep link as inline for layout */
+  padding: 5px; /* Add some padding for better click area */
+}
+
+.developer-link:hover {
+  color: #28b35e; /* Darker color on hover */
+  text-decoration: underline; /* Underline effect on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+
+.tags-section {
+  margin: 20px 0; /* Space above and below the section */
+  padding: 15px; /* Padding inside the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.tags-title {
+  font-size: 1.5rem; /* Title font size */
+  color: rgba(134, 134, 134, 0.85); /* White color with opacity */
+  margin-bottom: 25px; /* Spacing below the title */
+  margin-left: 15px; /* Spacing below the title */
+}
+
+.tags-list {
+  margin-top: 25px; /* Spacing below the title */
+  display: flex; /* Flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  gap: 10px; /* Space between tag items */
+}
+
+.tag-item {
+  background-color: rgba(61, 220, 132, 0.01); /* Light green background for tags */
+  color: grey; /* Tag text color */
+  padding: 8px 12px; /* Padding inside tags */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.tag-item:hover {
+  background-color: black; /* Darker on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+.footer {
+  color: #e0e0e0;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.footer-logo {
+  width: 130px;
+  margin: 0 auto;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds shadow to text */
+}
+
+.footer-heading {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffa500; /* Accent color on hover */
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #ffa500; /* Accent color on hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+.update-date {
+  font-size: 0.9rem; /* Smaller font size for the update date */
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white for contrast */
+  margin-top: 5px; /* Space above the date */
+  text-align: left; /* Align to the left */
+}
+
+.update-date {
+  font-size: 0.9rem; /* Smaller font size */
+  color: rgba(255, 255, 255, 0.6); /* Light color with reduced opacity */
+  margin-top: 5px; /* Space above the date */
+  text-align: left; /* Align to the left */
+}
+.update-date span {
+  font-size: 0.9rem; /* Smaller font size */
+  color: rgba(255, 255, 255, 0.3); /* Light color with reduced opacity */
+  margin-top: 5px; /* Space above the date */
+  text-align: left; /* Align to the left */
+}
+
+
+.bookmark-link {
+  display: block;
+  text-decoration: none; /* Remove underline */
+  width: 100%;
+}
+
+.bookmark-section {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two-column layout */
+  align-items: center; /* Center icon and text vertically */
+  gap: 1rem; /* Spacing between icon and text */
+  margin: 0 auto; /* Center container */
+  padding: 1rem;
+  background: #37373727; /* Dark background */
+  color: white;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.telegram-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background: #ffffff00;
+}
+
+.telegram-icon {
+  width: 70%;
+  height: 70%;
+}
+
+.bookmark-text h3 {
+  font-size: 1.3rem; /* Adjust font size for better fit */
+  font-weight: bold;
+  font-family: 'Montserrat';
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+}
+
+.bookmark-text p {
+  font-size: 1.5rem; /* Smaller font for single-line display */
+  font-family: 'Montserrat';
+  margin: 0;
+  line-height: 1.4;
+  color: rgb(160, 160, 160);
+  width:100%;
+}
+
+/* Hover effect */
+.bookmark-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .bookmark-section {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two-column layout */
+    align-items: center; /* Center icon and text vertically */
+    gap: 1rem; /* Spacing between icon and text */
+    margin: 0 auto; /* Center container */
+    padding: 1rem;
+    background: #37373727; /* Dark background */
+    color: white;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a subtle border */
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: -7px;
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bookmark-section {
+    grid-template-columns: auto 1fr; /* Keep icon and text in a single line */
+    gap: 0.5rem; /* Smaller gap on mobile */
+  }
+
+  .telegram-icon-wrapper {
+    width: 40px;
+    height: 40px; /* Adjust icon size for mobile */
+  }
+
+  .bookmark-text h3 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .bookmark-text p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust icon size */
+  .telegram-icon-wrapper {
+    width: 60px; /* Increase icon wrapper size */
+    height: 60px;
+  }
+
+  .telegram-icon {
+    width: 90%; /* Increase icon size within wrapper */
+    height: 90%;
+  }
+
+  /* Forcefully decrease text size */
+  .bookmark-text h3 {
+    font-size: 0.9rem !important; /* Force smaller font size for title */
+  }
+
+  .bookmark-text p {
+    margin-top: 5px;
+    font-size: .65rem !important; /* Force smaller font size for paragraph */
+  }
+
+  .bookmark-section {
+    gap: 1rem; /* Maintain spacing between icon and text */
+  }
+}
+@media (min-width: 769px) and (max-width: 2000px) {
+  /* Adjust icon size */
+  .telegram-icon-wrapper {
+    width: 70px; /* Adjust icon wrapper size for tablets */
+    height: 70px;
+  }
+
+  .telegram-icon {
+    width: 80%; /* Adjust icon size within wrapper */
+    height: 80%;
+  }
+
+  /* Adjust text size */
+  .bookmark-text h3 {
+    font-size: 1.2rem !important; /* Slightly larger font size for tablets */
+  }
+
+  .bookmark-text p {
+    font-size: 1.4rem !important; /* Adjust paragraph font size */
+  }
+
+  .bookmark-section {
+    gap: 1.5rem; /* Maintain spacing between icon and text */
+  }
+}
+
+
+
+
+/* Download links list styling */
+.download-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95.5%;
+  background-color: rgba(42, 42, 42, 0.4); /* Background with opacity */
+  padding: 12px 16px;
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+  border: 1px solid #2c2c2c; /* Border on the left side */
+  margin: 3.5px 0;
+
+}
+
+
+
+.download-item:hover {
+  transform: scale(1.02);
+}
+
+/* Default (Desktop) */
+.link-label {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  text-align: left;
+  flex: 1;
+}
+
+
+/* Open button styling */
+.open-link-button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(30, 30, 30, 0.5); /* Background with opacity */
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background, border, and shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover effect for the button */
+.open-link-button:hover {
+  background-color: rgba(30, 30, 30, 0.7); /* Slightly more opaque on hover */
+  border-color: #444444; /* Even lighter border on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker and more pronounced shadow on hover */
+}
+
+.open-link-button:hover {
+  background: #555555;
+}
+
+
+
+
+
+
+.breadcrumb-section {
+  font-size: 1rem;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  left: 0;
+  margin-left:-10px;
+  margin-top:-3px;
+
+}
+
+.breadcrumb-link {
+  color: #aaa; /* Grey color for all links */
+  text-decoration: none;
+  margin: 0 8px; /* Add space between the links */
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #fff; /* Hover effect to make it white */
+}
+
+.breadcrumb-link.current {
+  color: #fff; /* White color for the current game link */
+}
+/* Styling for the tags section */
+.game-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: grey;
+  width:100%;
+  margin-left: 10px;
+}
+
+.game-description span {
+  color: #ffae00;  /* Orange color for tags */
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.game-description strong {
+  color: #fff;  /* White color for 'Popular Tags:' */
+}
+/* Styles for Top Leaks Section */
+.top-leaks-section {
+  margin-top:40px;
+  color: grey;
+  border-radius: 8px;
+  width: 90%;
+}
+
+.top-leaks-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: olivedrab; /* Accent color for dark mode */
+  text-align: center;
+  
+}
+
+.top-leaks-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
+  gap: 1.5rem; /* Consistent gap for better spacing */
+  margin-right:35px;
+  color: grey;
+
+
+}
+
+.top-leak-item {
+  list-style: none;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center; /* Centers the link inside the item */
+  color: grey;
+
+}
+
+.top-leak-item:hover {
+  transform: translateY(-5px);
+}
+
+.top-leak-link {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.3); /* 0.8 sets the opacity to 80% */
+  border-radius: 8px;
+  color: grey;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-leak-link:hover {
+  background-color: #444;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile adjustments: single column layout */
+@media (max-width: 768px) {
+  .top-leaks-list {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 1.5rem;
+  }
+}
+
+
+.top-leak-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+  text-align: left; /* Aligns text to the left */
+  background-color: rgba(51, 51, 51, 0.3); /* Dark background with opacity */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+}
+
+.top-leak-link:hover {
+  background-color: rgba(51, 51, 51, 1); /* Darker hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.top-leak-link i {
+  margin-left: 10px; /* Adds space between the text and the arrow icon */
+  font-size: 1.2rem; /* Size of the arrow icon */
+}
+
+
+.top-leaks-more-container {
+  display: flex; /* Enables flexbox on the container */
+  justify-content: flex-end; /* Aligns the content (link) to the right */
+  margin-right: 40px; /* Removes any default margin */
+}
+
+.top-leaks-more {
+  font-size: 1rem; /* Adjust the font size */
+  font-weight: 600; /* Optional: Adjust the font weight */
+  color: grey; /* Text color */
+  text-decoration: underline; /* Add underline to the text */
+}
+
+.top-leaks-more:hover {
+  text-decoration: none; /* Remove underline when hovering */
+}
+
+
+/* Align text to the left and add a little margin */
+.game-title-left {
+  text-align: left;
+  margin-top: 35px; /* Adjust as needed */
+  margin-left: 15px; /* Adjust as needed */
+  font-size: 30px; /* Larger title size */
+  font-weight: bold;
+  color: #ffffff; /* Example for dark mode */
+}
+
+.game-version-small {
+  font-size: 18px; /* Slightly smaller version text */
+  color: #bbbbbb; /* Lighter color for contrast */
+}
+
+.game-update-left {
+  text-align: left;
+  margin-left: 15px; /* Adjust as needed */
+  margin-top: 5px; /* Adds spacing from the title */
+  margin-bottom: 0px; /* Adjust as needed */
+  font-size: 16px;
+  color: grey;
+}
+@media (max-width: 768px) {
+  .bookmark-section h3 {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .bookmark-section p {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}
+
+
+
+
+
+
+
+
+/* Optional: Ensure the download-link is full width for proper layout */
+.download-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from link */
+  width: 100%;
+  transition: all 0.3s ease; /* Smooth transition for link hover effects */
+}
+
+/* Wrapper around the image */
+.image-wrapper {
+  width: 50px;  /* Adjust the size */
+  height: 50px;
+  border-radius: 10%;  /* Slightly rounded corners */
+  overflow: hidden; /* Ensure the image stays inside the rounded area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px; /* Spacing between image and text */
+  background: linear-gradient(135deg, #2c2c2c, #404040); /* Dark gradient to match dark mode */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+}
+
+/* Image styling */
+.download-icon {
+  width: 70%; /* Adjust image size */
+  height: 70%;
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the image */
+.image-wrapper:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 0 15px rgba(36, 36, 36, 0.7); /* Glowing shadow effect on hover */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Styling for text */
+.link-label {
+  color: white; /* Text color changes to white for contrast */
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+/* Optional: Icon positioning */
+.fas.fa-external-link-alt {
+  color: white; /* Icon color white for better contrast */
+  margin-left: 12px; /* Space between text and icon */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon effects */
+}
+
+/* Hover effect for the icon */
+.download-link:hover .fas.fa-external-link-alt {
+  transform: scale(1.2); /* Slight zoom on hover */
+  color: #ff7e5f; /* Change icon color on hover */
+}
+
+.parentheses-content{
+  color:rgb(211, 208, 35);
+  font-size: .7rem;
+}
+
+
+.download-section {
+  width: 90%;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding:30px;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .download-section {
+    width: 93%;
+    padding:10px;
+  }
+
+  .download-section h2 {
+    font-size: .8rem;                          /* Increase font size for prominence */
+    margin-bottom: 15px;                      /* More space below the heading */
+    color: #ffffff;                           /* White color for contrast */
+    text-transform: uppercase;                /* Uppercase for a bold look */
+    letter-spacing: 1px;                      /* Add spacing between letters */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05); /* Underline effect for emphasis */
+    padding-bottom: 5px;                      /* Space between text and underline */
+    font-weight: bold;                        /* Make the heading bold */
+    text-align: left;                         /* Align text to the left */
+  }
+}
+
+/* Description section styling */
+.game-description-Later {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 95%; /* Makes it responsive for smaller screens */
+  margin-top: -20px;
+  color: rgba(212, 212, 212, 0.55); /* Adds opacity to the text color */
+  text-align: justify; /* Justifies the text */
+  align-items: center; /* This ensures content is centered horizontally */
+  justify-content: center; /* Centers content vertically if needed */
+}
+
+
+
+/* Ensure the entire item is clickable */
+/* Ensure the entire item is clickable */
+.download-item-Image {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #181818;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #2c2c2c; /* Border on the left side */
+}
+
+
+/* Hover effect for the download item */
+.download-item-Image:hover {
+  transform: translateY(-8px); /* Slight lift on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5); /* Glowing shadow */
+  background: linear-gradient(135deg, #2b2b2b61, #0b0b0b4f); /* Change gradient on hover */
+}
+
+/* Wrapper around the image */
+.image-wrapper-Image {
+  width: 100px; /* Adjust the size as needed */
+  height: 90px;
+  overflow: hidden; /* Ensure the image stays inside the rounded area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px; /* Spacing between image and text */
+  background: linear-gradient(135deg, #2c2c2c00, #40404000); /* Dark gradient to match dark mode */
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+  position: relative; /* Make the wrapper position relative to position the text inside it */
+  border-radius: 5px;
+
+}
+
+
+.arrow-ico svg {
+  margin-left: 6px;
+  vertical-align: middle;
+  stroke: #ccc; /* or #fff */
+}
+
+/* Image styling */
+.download-icon {
+  width: 70%; /* Cover the wrapper width */
+  height: 70%; /* Cover the wrapper height */
+  object-fit: cover; /* Ensures the icon maintains aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the image */
+.image-wrapper-Image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.open-text {
+  position: absolute; /* Position it at the bottom */
+  bottom: 0; /* Align it at the bottom */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it span across the entire width of the image */
+  background-color: #000000a9; /* Black background */
+  color: white; /* White text color */
+  font-size: 0.8rem; /* Small text */
+  padding: 0.5rem 0; /* Add some padding for spacing */
+  text-align: center; /* Center align the text */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Styling for text */
+.link-label-image {
+  color: white; /* Text color changes to white for contrast */
+  font-size: .6rem;
+  flex-grow: 1; /* Make sure text takes up remaining space */
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/* Wrapper around the image */
+.image-wrapper-2 {
+  width: 100px;  /* Adjust size */
+  height: 100px;
+  overflow: hidden; /* Ensure the image stays inside the rounded area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+}
+
+/* Ensuring the image scales perfectly */
+.image-wrapper-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+
+.image-wrapper-Image img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+.auth-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-button a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.loginText {
+  align-items: center;
+  border: 1px solid #dbdbdb; /* Border with light gray color */
+  border-radius: 0.375em; /* Rounded corners */
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.7rem; /* Font size */
+  height: 1.8em; /* Fixed height for consistency */
+  justify-content: center;
+  padding: calc(0.5em - 1px) 1em; /* Padding */
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  margin-right: 10px;
+}
+
+.loginText:hover,
+.loginText:focus {
+  transform: scale(1.05); /* Slight size increase on hover or focus */
+}
+
+.telegramPart{
+  margin-top: 65px;
+}
+
+
+.top-banner {
+  margin-top: -30px;
+  width: 100%; /* Full width background */
+  background-color:rgba(32, 32, 32, 0.611); /* Dark mode compatible */
+  padding: 10px 20px; /* Reduced padding for height */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between heading and link */
+  align-items: center; /* Vertical centering */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);  /* Top line */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Bottom line */
+}
+
+.banner-content {
+  display: flex;
+  width: 100%; /* Full width for proper spacing */
+  justify-content: space-between; /* Space between the heading and button */
+  align-items: center;
+}
+
+.heading-latest-leaks {
+  font-size: 1.4rem; /* Default font size for larger screens */
+  color: #fff; /* White text for contrast */
+  margin: 0;
+}
+
+/* For mobile devices (screens narrower than 768px) */
+@media (max-width: 768px) {
+  .heading-latest-leaks {
+    font-size: 1.1rem; /* Smaller font size for mobile */
+  }
+}
+
+
+.more-link {
+  font-size: 1rem;
+  color: #ff5a5a; /* A bright color for visibility */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push to the right end */
+  margin-right: 0px; /* Push to the right end */
+  
+  padding: 6px 12px; /* Some padding for better shape */
+  border-radius: 10px; /* Rounded border */
+  background-color: rgba(255, 90, 90, 0.1); /* Slight background for visibility */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the icon moves to the right */
+ font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.more-link:hover {
+  background-color: rgba(255, 90, 90, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.more-link i {
+  margin-left: 5px; /* Space between text and icon */
+}
+
+.more-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between text and icon */
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; 
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #ff5a5a;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: -15px; /* Push to the right */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width value as needed for your mobile breakpoint */
+
+  .more-link {
+    font-size: .75rem;
+    color: #ff5a5a; /* A bright color for visibility */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+      margin-right: 0px; /* Push to the right end */
+  }
+  
+  .more-link i {
+    margin-left: 5px; /* Space between text and icon */
+  }
+  
+  .more-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and icon */
+  }
+}
+
+
+.top-New-Client{
+  width: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark Grayish Black */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and borders are included in width */
+  overflow-x: hidden; /* Prevents horizontal overflow if content exceeds the viewport */
+}
+.mainClass{
+  position: relative;
+  padding: 0;
+  background-color: #121212; /* Dark Grayish Black */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and borders are included in width */
+  overflow-x: hidden; /* Prevents horizontal overflow if content exceeds the viewport */
+}
+
+
+
+
+
+@media (max-width: 768px) { /* Adjust the max-width value as needed for your mobile breakpoint */
+
+  .game-description {
+    padding: 0 20px; /* Add padding for left and right instead of relying on margins */
+  }
+
+  /* Styling for the text within the game-description */
+  .game-description p {
+    font-size: 0.65rem;
+    line-height: 1.6;
+    color: grey;
+    margin: 0; /* Remove margins */
+    text-align: justify; /* Optional: Makes the text look more uniform */
+  }
+
+  .game-description span {
+    color: #ffae00; /* Orange color for tags */
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .game-description strong {
+    color: #fff; /* White color for 'Popular Tags:' */
+  }
+  /* Description section styling */
+.game-description-Later {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: grey;
+  margin: 0; /* Remove margins */
+  text-align: justify; /* Optional: Makes the text look more uniform */
+  padding: 0 20px; /* Add padding for left and right instead of relying on margins */
+
+}
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.telegramPart {
+  display: block; /* Ensure it's visible by default */
+}
+
+/* Hide on desktop (screens wider than 1024px) */
+@media (min-width: 1024px) {
+  .telegramPart {
+    display: none;
+  }
+}
+
+
+
+
+
+
+/*New Additions of 05-03*/
+
+.pirate-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right:10px;
+}
+
+.icon {
+  font-size: 20px;
+  color: grey;
+}
+
+.notification-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  font-size: 20px;
+  color: grey;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 6px;
+}
+
+
+.icon{
+  transform: rotate(0deg);
+}
+
+.notification-icon{
+  transform: rotate(0deg);
+
+}
+
+
+/* Three-line menu button (Left, Next to Header) */
+.mobile-menu-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 10px; /* Move it further left */
+  top:8px;
+  transform: rotate(0deg);
+}
+
+/* Mobile menu (Full-screen overlay) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(18, 18, 18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  color: rgb(255, 100, 100);
+}
+
+/* Show Menu Button Only on Mobile */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  .logo{
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+
+/* Close Button (Inside Fullscreen Mobile Menu) */
+.mobile-menu-close {
+  position: absolute;
+  top: 15px;
+  right: 15px; /* Move to the right */
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+
+}
+
+
+
+.mainClass {
+  visibility: visible !important;
+}
+
+
+
+
+.lock-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.lock-icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.popup-content button {
+  margin: 10px;
+  padding: 8px 16px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup-content button:hover {
+  background: #0056b3;
+}
+
+
+.download-item {
+  position: relative; /* Allows absolute positioning inside */
+}
+
+.lock-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the whole list item */
+  height: 100%; /* Full height */
+  background: rgba(0, 0, 0, 0.25); /* Slight transparency */
+  display: flex;
+  justify-content: flex-end; /* Align child div to the right */
+  align-items: center;
+  cursor: pointer;
+}
+
+.lock-right-bg {
+  width: 60px; /* Background width for lock */
+  height: 100%; /* Full height */
+  background: black; /* Solid background for lock */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.lock-icon {
+  font-size: 20px;
+  color: white;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px; /* Ensures spacing on smaller screens */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Content */
+.popup-content {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+/* Title */
+.popup-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Subtext */
+.popup-text, .popup-free-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: grey;
+}
+
+/* Benefits Section */
+.popup-benefits {
+  list-style: none;
+  padding: 15px;
+  background: #222;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Each Benefit Item */
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon Styling */
+.benefit-icon {
+  font-size: 1.5rem;
+}
+
+/* Benefit Text */
+.benefit-text {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+/* Benefit Hover Effect */
+.benefit-item:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Primary Buttons */
+.popup-btn {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #28b35e;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.popup-btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #ff007f);
+  transform: scale(1.05);
+}
+
+/* Close Button */
+.close-btn {
+  background: #333;
+  font-weight: 600;
+}
+
+.close-btn:hover {
+  background: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🔹 Responsive Adjustments */
+@media (min-width: 600px) {
+  .popup-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .popup-btn {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    padding: 16px;
+  }
+
+  .popup-title {
+    font-size: 1.4rem;
+  }
+
+  .popup-text, .popup-free-text {
+    font-size: 0.85rem;
+  }
+
+  .popup-btn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .benefit-item {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .benefit-icon {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Apply larger margin only on desktop */
+@media (min-width: 768px) {
+  .breadcrumb-section {
+    margin-top: 12px; /* Increased margin for desktop */
+  }
+}
+
+
+
+
+/* Container for comments */
+.comments-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #151515;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #323232;
+  margin-top: 50px; /* Reduced top margin for better fit on mobile */
+  margin-bottom: 50px; /* Reduced top margin for better fit on mobile */
+
+}
+
+/* Header */
+.comments-header {
+  font-size: 20px; /* Reduced font size for mobile */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px; /* Reduced margin */
+  color: #e5e7eb;
+}
+
+/* Comment list container */
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap for a tighter layout */
+}
+
+/* Each comment card */
+.comment-card {
+  padding: 16px; /* Reduced padding for mobile */
+  background-color: #1f2020;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid #353535;
+  transition: background 0.3s ease-in-out;
+}
+
+.comment-card:hover {
+  background-color: #374151;
+}
+
+/* Comment header: author and timestamp */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Author styling */
+.comment-author {
+  font-size: 16px; /* Reduced font size */
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+/* Timestamp styling */
+.comment-timestamp {
+  font-size: 10px; /* Reduced font size */
+  color: #9ca3af;
+}
+
+/* Comment content text */
+.comment-content {
+  margin-top: 8px;
+  font-size: 14px; /* Reduced font size */
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* Mention box styling */
+.mention-box {
+  font-size: 12px; /* Reduced font size */
+  color: #9ca3af;
+  margin-top: 12px;
+  padding-left: 10px; /* Reduced padding */
+  border-left: 4px solid #3b82f6;
+}
+
+/* Mention user styling */
+.mention-user {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Missing mention styling */
+.mention-missing {
+  color: #f87171;
+  font-weight: 500;
+}
+
+/* No comments message */
+.no-comments {
+  text-align: center;
+  font-size: 16px; /* Reduced font size */
+  color: #9ca3af;
+}
+
+/* Comment Input Section */
+.comment-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduced gap */
+  width: 100%;
+  max-width: 100%; /* Ensure the input takes full width on mobile */
+  margin: 16px auto; /* Reduced margin for better fit */
+}
+
+.comment-input {
+  width: 100%;
+  min-height: 80px; /* Reduced height for a more compact input field */
+  padding: 8px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.comment-input:focus {
+  border-color: #08f; /* Highlight effect */
+}
+.comment-name {
+  width: 100%;
+  height: 40px;
+  padding: 8px; /* Reduced padding */
+  font-size: 14px;
+  display: flex;
+  align-items: center; /* Vertically centers the text */
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+  resize: none;
+}
+
+
+.comment-name:focus {
+  border-color: #08f;
+}
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .comments-container {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .comments-header {
+    font-size: 18px;
+  }
+
+  .comment-card {
+    padding: 12px;
+  }
+
+  .comment-author {
+    font-size: 14px;
+  }
+
+  .comment-timestamp {
+    font-size: 8px;
+  }
+
+  .comment-content {
+    font-size: 12px;
+  }
+
+  .mention-box {
+    font-size: 10px;
+  }
+
+  .no-comments {
+    font-size: 14px;
+  }
+
+  .comment-input {
+    min-height: 60px;
+    font-size: 12px;
+  }
+}
+
+/* Submit Button */
+.submit-comment-btn {
+  width: 150px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #08f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-comment-btn:hover {
+  background-color: #06c;
+  transform: scale(1.05);
+}
+
+.submit-comment-btn:active {
+  transform: scale(0.95);
+}
+
+/* Sign-in Popup */
+.signin-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.signin-btn {
+  background-color: #08f;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #06c;
+}
+
+.close-btn {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  z-index: 9999999;
+}
+
+.popup-box {
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-box h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  font-size: 11px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.popup-buttons button {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-buttons button:first-child {
+  background: linear-gradient(135deg, #ff5722, #ff784e);
+  color: white;
+}
+
+.popup-buttons button:first-child:hover {
+  background: linear-gradient(135deg, #ff3d00, #ff784e);
+  transform: scale(1.05);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #ff5722;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.notification-container {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.notification-icon
+{
+  font-size: 1.2rem;
+  color: #7d7f7e; /* Highlight color in dark mode */
+}
+.whats-new-icon {
+  font-size: 1.2rem;
+  color: #ff9800; /* Highlight color in dark mode */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* "What's New" Icon Animation */
+.whats-new-container {
+  position: relative;
+}
+
+.whats-new-icon {
+  color: #ff5722; /* Eye-catching color */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.whats-new-icon:hover {
+  transform: scale(1.3);
+}
+
+
+.follow-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(to right, #d74b3e 50%, #c83e33 60%);
+  color: white;
+  border-radius: 15px;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 32px;
+}
+
+.follow-btn .divider {
+  width: 1px;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.follow-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.follow-btn .icon i {
+  color: white;
+  font-size: 15px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600&display=swap');
+
+.three-parts-label {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #ffffffd9;              /* Slightly higher opacity for better contrast */
+  letter-spacing: 0.35px;
+  line-height: 1.4;
+}
+/* Optional boost on desktop */
+@media (min-width: 768px) {
+  .three-parts-label {
+    font-size: 1rem;
+  }
+}
+
+
+/* Mobile (≤ 640px) */
+@media (max-width: 640px) {
+  .link-label {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+}
+
+
+.post-number-label {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 5px 5px;
+  border-radius: 7px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 40px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* ⬆️ For larger screens (like desktops) */
+@media (min-width: 768px) {
+  .post-number-label {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    min-width: 50px;
+  }
+}
+
+
+
+.game-details {
+  max-width: 97%;
+  margin: 0px 0px;
+  font-family: Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  background: none;
+}
+
+.game-section {
+  border: 1px solid #282828;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.game-section input {
+  display: none;
+}
+
+.game-section label {
+  display: block;
+  padding: 14px 20px;
+  background: #1c1c1c;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-section label:hover {
+  background: #111111;
+}
+
+.game-section .content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background: #1c1c1c;
+  color: #727272; /* slightly softer for better readability */
+  font-size: 15px;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif; /* improved font stack */
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  
+}
+
+.game-section input:checked ~ .content {
+  max-height: 600px;
+  padding: 14px 20px;
+}
+
+@media (max-width: 600px) {
+  .game-section label {
+    font-size: 16px;
+  }
+  .game-section .content {
+    font-size: 14px;
+  }
+}
