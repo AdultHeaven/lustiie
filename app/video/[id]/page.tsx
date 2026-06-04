@@ -4,7 +4,7 @@ import Link from "next/link";
 import '../../gamePage.css';
 import './video.css';
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400;
 import Script from "next/script";
 const TAG_LIST = [
   "video", "videos", "pics", "images", "collection",
