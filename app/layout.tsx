@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
  import ClientComponent from "./Components/ClientComponent";
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: {
@@ -39,9 +40,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
    <html lang="en">
       <body className="bg-neutral-950 text-zinc-100 antialiased">
+            <Suspense fallback={<div>Loading...</div>}>
+
         <ClientComponent />
           {children}
-        
+        </Suspense>
       </body>
     </html>
   );
