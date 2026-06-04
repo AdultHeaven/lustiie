@@ -1,0 +1,89 @@
+/* ===== PAGE WRAPPER ===== */
+.tags-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== HEADER ===== */
+.tags-header {
+  margin-bottom: 16px;
+    margin-top: 20px;
+
+}
+
+.tags-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ===== SEARCH ===== */
+.tags-search {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  background: #1b1b1f;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+
+  outline: none;
+}
+
+.tags-search:focus {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ===== GRID ===== */
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ===== TAG ITEM ===== */
+.tag-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+
+  text-align: center;
+  font-size: 13px;
+  color: #d1d1d6;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.tag-item:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tags-title {
+    font-size: 18px;
+  }
+}
+
+/* ===== VERY SMALL ===== */
+@media (max-width: 480px) {
+  .tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .tag-item {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

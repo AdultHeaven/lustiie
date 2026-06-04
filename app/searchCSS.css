@@ -1,0 +1,249 @@
+.search-page {
+  min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.search-page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 16px 28px;
+}
+
+.search-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  margin-top: -20px;
+}
+
+.search-subtitle {
+  font-size: 16px;
+  color: #9a9a9a;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   SEARCH INPUT
+   =============================== */
+.search-input-wrapper {
+  position: relative;
+  background: #0f0f12;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px 16px 14px 44px;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8c8c94;
+}
+
+.search-input-main {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 15px;
+}
+
+.search-input-main::placeholder {
+  color: #7d7d85;
+}
+
+/* ===============================
+   EMPTY PANEL
+   =============================== */
+.search-empty-panel {
+  margin-top: 22px;
+  padding: 28px 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #9a9a9a;
+  font-size: 15px;
+}
+
+/* ===============================
+   RESULTS
+   =============================== */
+.results-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.results-message {
+  text-align: center;
+  color: #8c8c94;
+}
+
+/* ===============================
+   LOAD MORE
+   =============================== */
+.load-more-wrapper {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.load-more-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.video-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.video-card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+
+.thumbnail-wrapper {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.thumbnail-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.thumbnail-wrapper:hover .thumbnail-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 42px;
+  height: 42px;
+  color: white;
+  opacity: 0.9;
+}
+
+
+.card-content {
+  padding: 12px 14px 14px;
+}
+
+.video-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: #f2f2f2;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.model-link {
+  font-size: 13px;
+  color: #9a9a9a;
+  text-decoration: none;
+}
+
+.model-link:hover {
+  color: #fff;
+}
+
+.video-meta {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7d7d85;
+}
+
+
+/* ===============================
+   RESULTS GRID
+   =============================== */
+.results-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ EXACT 4 columns */
+  gap: 22px;
+}
+
+
+/* Tablet (optional, nice balance) */
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 2×2 */
+@media (max-width: 640px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+
+.video-title {
+  font-weight: 400;
+  line-height: 1.3;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .video-title {
+    font-size: 11px;   /* 👈 reduced */
+    line-height: 1.35;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .video-title {
+    font-size: 13px;
+  }
+
+  .model-link {
+    font-size: 11px;
+  }
+
+  .video-meta {
+    font-size: 10px;
+  }
+}

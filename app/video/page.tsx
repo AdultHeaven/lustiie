@@ -1,9 +1,9 @@
 // app/videos/page.tsx
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import './homePageCSS.css';
-import './gamePage.css';
-import './videos.css';
+import '../homePageCSS.css';
+import '../gamePage.css';
+import '../videos.css';
 
 
 const VIDEOS_PER_PAGE = 12;
