@@ -15,7 +15,7 @@ import {
 import "../headerNew.css";
 
 const navLinks = [
-    { label: "Videos", href: "/videos" },
+    { label: "Videos", href: "/video" },
  
         { label: "Tags", href: "/tags" },
       { label: "Search", href: "/search" },
