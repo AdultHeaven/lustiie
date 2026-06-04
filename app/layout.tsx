@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
  import ClientComponent from "./Components/ClientComponent";
 import { Suspense } from 'react';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
    <html lang="en">
       <body className="bg-neutral-950 text-zinc-100 antialiased">
             <Suspense fallback={<div>Loading...</div>}>
-
+<Analytics/>
         <ClientComponent />
           {children}
         </Suspense>
